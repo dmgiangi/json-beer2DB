@@ -30,14 +30,11 @@ public class App {
                 throw new RuntimeException(e);
             }
         }
-        HashSet<String> ingredients = new HashSet<>();
-        for (Object o : beersList) {
+        for(Object o : beersList){
             JSONObject beer = (JSONObject) o;
-            JSONObject method = (JSONObject) beer.get("ingredients");
-            ingredients.add(method.toJSONString());
+            System.out.println(beer.toJSONString());
         }
-        System.out.println(ingredients);
-
+        //new Method(beersList).printAllMashTemp();
     }
 
     FileReader getFileReader(int i) {
